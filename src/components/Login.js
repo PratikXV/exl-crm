@@ -22,8 +22,8 @@ export default class Login extends Component {
                         placeholder="Enter password"
                     />
                 </div>
-
-                <button type="submit" className="btn btn-primary btn-block">
+                <br/><br/>
+                <button type="submit" className="btn btn-primary">
                     <Link to="/dash" style={{ textDecoration: 'none', color: "white" }}>Login</Link>
                 </button>
             </form>

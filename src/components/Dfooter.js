@@ -1,17 +1,13 @@
 import React from "react";
-import {MDBContainer, MDBFooter} from "mdbreact";
+import '../styles/Dfooter.css'
 
 const FooterPage = () => {
     return (
-        <MDBFooter color="black" className="font-small pt-4 mt-4">
-            
-        
-            <div className="footer-copyright text-center py-3">
-                <MDBContainer fluid>
-                    &copy; {new Date().getFullYear()} Copyright: <a href="#"> EXL Services </a>
-                </MDBContainer>
+        <footer>
+            <div class="fixed-footer">
+                <div class="container"><b>Copyright &copy; 2020 AGC Networks</b></div>
             </div>
-        </MDBFooter>
+        </footer>
     );
 }
 

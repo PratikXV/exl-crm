@@ -4,14 +4,22 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login';
 import Dform from './components/Dform';
+import Dfooter from './components/Dfooter';
 
 
 function App() {
-  return (<Router>
+  return (
+  <Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-          <Link className="navbar-brand" to={"/sign-in"}>Exl-Service</Link>
+        <img
+            src="https://www.agcnetworks.com/wp-content/uploads/2016/07/logo.png"
+            
+            className="d-inline-block align-top"
+            alt="exl"
+          />
+          <Link className="navbar-brand" to={"/sign-in"}></Link>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -31,7 +39,12 @@ function App() {
           </Switch>
         </div>
       </div>
-    </div></Router>
+    </div>
+    <div>
+    <Dfooter/>
+    </div>
+    </Router>
+    
   );
 }
 
