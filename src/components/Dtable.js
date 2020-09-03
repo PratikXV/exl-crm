@@ -20,6 +20,7 @@ const Dtable = () => {
     }
     return (
         <div>
+            <h3>Last Three Transactions</h3>
             <ReactBootStrap.Table striped bordered hover>
                 <thead>
                     <tr>

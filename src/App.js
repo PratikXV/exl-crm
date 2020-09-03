@@ -1,24 +1,37 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Dform from './components/Dform';
-//import Dtable from './components/Dtable';
-import DNav from './components/DNav';
-import FooterPage from './components/Dfooter';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login';
-//import './App.css';
+import Dform from './components/Dform';
+
 
 function App() {
-  return (
-    <>
-      <DNav/>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Login} exact={true} />
-          <Route path="/dash" component={Dform} />
-        </Switch>
-      </BrowserRouter>
-      <FooterPage/>
-    </>
+  return (<Router>
+    <div className="App">
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <div className="container">
+          <Link className="navbar-brand" to={"/sign-in"}>Exl-Service</Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to={"/sign-in"}>Login</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div className="auth-wrapper">
+        <div className="auth-inner">
+          <Switch>
+            <Route exact path='/' component={Login} />
+            <Route path="/sign-in" component={Login} />
+            <Route path="/dash" component={Dform} />
+          </Switch>
+        </div>
+      </div>
+    </div></Router>
   );
 }
 
